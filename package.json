@@ -1,0 +1,50 @@
+{
+  "name": "test-viem",
+  "version": "0.0.0-semantic-release",
+  "description": "Test viem speed",
+  "author": "Dmitrii Lipin",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "prepare": "husky install",
+    "prettier": "prettier --write .",
+    "prettier:ci": "npx prettier --check .",
+    "lint": "eslint \"**/*.ts\" --fix",
+    "lint:ci": "eslint \"**/*.ts\"",
+    "typecheck:ci": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ethersproject/bignumber": "^5.7.0",
+    "@gearbox-protocol/sdk": "^1.23.2",
+    "ethers": "6.6.2",
+    "node-fetch": "2",
+    "ts-node": "^10.9.1",
+    "viem": "^1.2.9"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@gearbox-protocol/eslint-config": "^1.4.1",
+    "@gearbox-protocol/prettier-config": "^1.4.1",
+    "@types/node": "^18.7.6",
+    "@types/node-fetch": "^2.6.4",
+    "@types/rimraf": "^3.0.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.22.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "tslog": "^3.3.3",
+    "typescript": "5.0.4"
+  },
+  "prettier": "@gearbox-protocol/prettier-config",
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": "prettier --write"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2016",
+    "moduleResolution": "node",
+
+    "outDir": "dist",
+
+    "types": ["jest", "node"],
+    "lib": ["esnext"],
+
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "removeComments": true,
+    "downlevelIteration": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "lib"]
+}
